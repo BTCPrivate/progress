@@ -6,7 +6,8 @@ const browserSync = require('browser-sync');
 const server = browserSync.create();
 const del = require('del');
 const autoprefixer = require('autoprefixer');
-
+var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
 const paths = {
   src: 'src',
   dest: 'docs',
@@ -71,6 +72,14 @@ function compress() {
 function clean() {
   return del([`${paths.tmp}`, `${paths.dest}`])
 }
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 exports.clean = clean;
 
