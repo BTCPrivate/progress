@@ -48,5 +48,8 @@
   "scripts": {
     "start": "gulp serve",
     "build": "gulp"
+  },
+  "dependencies": {
+    "lodash.template": "^4.5.0"
   }
 }
