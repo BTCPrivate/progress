@@ -100,7 +100,7 @@
 }
 
 .progress-step.is-active .progress-marker::before {
-  background-color: #2196F3;
+  background-color: #ff9800;
 }
 
 .progress-step.is-complete .progress-marker::before, .progress-step.is-progress .progress-marker::before {
